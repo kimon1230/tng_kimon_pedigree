@@ -1,10 +1,10 @@
-# Custom Pedigree Chart
+# Kimon's Pedigree Chart
 
-A TNG (The Next Generation of Genealogy Sitebuilding) mod that adds a **Kimon** display mode to the pedigree chart.
+A [TNG](https://lythgoenealogy.com) (The Next Generation of Genealogy Sitebuilding) mod that adds a **Kimon** display mode to the pedigree chart.
 
 **Author:** Kimon Andreou
 **Mod Version:** 1.0
-**Minimum TNG Version:** 15
+**Requires:** TNG 15.x
 
 **Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_pedigree.cfg` (search for `pedkimon`) and in `extensions/tng_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
 
@@ -33,7 +33,7 @@ extensions/
 1. Copy `mods/tng_pedigree.cfg` into your TNG `mods/` directory.
 2. Log in to TNG as admin.
 3. Go to **Admin > Mod Manager**.
-4. Find **Custom Pedigree Chart** in the mod list.
+4. Find **Kimon's Pedigree Chart** in the mod list.
 5. Click **Install**.
 
 The mod installer will:
@@ -45,7 +45,7 @@ The mod installer will:
 ## Uninstallation
 
 1. Go to **Admin > Mod Manager**.
-2. Find **Custom Pedigree Chart**.
+2. Find **Kimon's Pedigree Chart**.
 3. Click **Remove**.
 
 The mod installer will reverse all patches and delete the created files and directory.
