@@ -1,4 +1,4 @@
-//%version:15.0.0.1%
+//%version:1.0%
 function FillSlot(slot,currperson,lastperson) {
 	var currentBox = document.getElementById('box'+slot);
 	var content = "";
