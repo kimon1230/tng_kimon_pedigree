@@ -1,6 +1,6 @@
 # Kimon's Pedigree Chart
 
-A [TNG](https://lythgoenealogy.com) (The Next Generation of Genealogy Sitebuilding) mod that adds a **Kimon** display mode to the pedigree chart.
+A [TNG](https://tngsitebuilding.com/index.php) (The Next Generation of Genealogy Sitebuilding by Darrin Lythgoe) mod that adds a **Kimon** display mode to the pedigree chart.
 
 **Author:** Kimon Andreou
 **Mod Version:** 1.0
