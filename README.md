@@ -3,7 +3,7 @@
 A [TNG](https://tngsitebuilding.com/index.php) (The Next Generation of Genealogy Sitebuilding by Darrin Lythgoe) mod that adds a **Kimon** display mode to the pedigree chart.
 
 **Author:** Kimon Andreou
-**Mod Version:** 1.2.1
+**Mod Version:** 1.2.1a
 **Requires:** TNG 15.x
 
 **Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_kimon_pedigree.cfg` (search for `pedkimon`) and in `mods/tng_kimon_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
