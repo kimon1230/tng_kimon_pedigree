@@ -6,7 +6,7 @@ A [TNG](https://tngsitebuilding.com/index.php) (The Next Generation of Genealogy
 **Mod Version:** 1.0
 **Requires:** TNG 15.x
 
-**Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_kimon_pedigree.cfg` (search for `pedkimon`) and in `extensions/tng_kimon_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
+**Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_kimon_pedigree.cfg` (search for `pedkimon`) and in `mods/tng_kimon_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
 
 ## What It Does
 
@@ -22,10 +22,7 @@ Adds a "Kimon" tab to the pedigree chart display mode selector (alongside Standa
 
 ```
 mods/
-  tng_kimon_pedigree.cfg              # Mod manifest (all patches + embedded JS)
-extensions/
-  tng_kimon_pedigree/
-    kimon_pedigree.js           # Chart rendering overrides (created by mod installer)
+  tng_kimon_pedigree.cfg              # Mod manifest (patches + embedded JS)
 ```
 
 ## Installation
@@ -37,8 +34,8 @@ extensions/
 5. Click **Install**.
 
 The mod installer will:
-- Create the `extensions/tng_kimon_pedigree/` directory
-- Create `extensions/tng_kimon_pedigree/kimon_pedigree.js`
+- Create the `mods/tng_kimon_pedigree/` directory
+- Create `mods/tng_kimon_pedigree/kimon_pedigree.js`
 - Patch `pedigree.php` (6 patches: input sanitization, link highlighting, config overrides, JS include, CSS injection, display selector link)
 - Patch `languages/English/text.php` (1 patch: "Kimon" label)
 
