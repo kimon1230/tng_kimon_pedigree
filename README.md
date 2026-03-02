@@ -6,7 +6,7 @@ A [TNG](https://tngsitebuilding.com/index.php) (The Next Generation of Genealogy
 **Mod Version:** 1.0
 **Requires:** TNG 15.x
 
-**Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_pedigree.cfg` (search for `pedkimon`) and in `extensions/tng_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
+**Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_kimon_pedigree.cfg` (search for `pedkimon`) and in `extensions/tng_kimon_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
 
 ## What It Does
 
@@ -22,23 +22,23 @@ Adds a "Kimon" tab to the pedigree chart display mode selector (alongside Standa
 
 ```
 mods/
-  tng_pedigree.cfg              # Mod manifest (all patches + embedded JS)
+  tng_kimon_pedigree.cfg              # Mod manifest (all patches + embedded JS)
 extensions/
-  tng_pedigree/
+  tng_kimon_pedigree/
     kimon_pedigree.js           # Chart rendering overrides (created by mod installer)
 ```
 
 ## Installation
 
-1. Copy `mods/tng_pedigree.cfg` into your TNG `mods/` directory.
+1. Copy `mods/tng_kimon_pedigree.cfg` into your TNG `mods/` directory.
 2. Log in to TNG as admin.
 3. Go to **Admin > Mod Manager**.
 4. Find **Kimon's Pedigree Chart** in the mod list.
 5. Click **Install**.
 
 The mod installer will:
-- Create the `extensions/tng_pedigree/` directory
-- Create `extensions/tng_pedigree/kimon_pedigree.js`
+- Create the `extensions/tng_kimon_pedigree/` directory
+- Create `extensions/tng_kimon_pedigree/kimon_pedigree.js`
 - Patch `pedigree.php` (6 patches: input sanitization, link highlighting, config overrides, JS include, CSS injection, display selector link)
 - Patch `languages/English/text.php` (1 patch: "Kimon" label)
 
