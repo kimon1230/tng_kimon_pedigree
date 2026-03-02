@@ -3,7 +3,7 @@
 A [TNG](https://tngsitebuilding.com/index.php) (The Next Generation of Genealogy Sitebuilding by Darrin Lythgoe) mod that adds a **Kimon** display mode to the pedigree chart.
 
 **Author:** Kimon Andreou
-**Mod Version:** 1.1.1
+**Mod Version:** 1.2
 **Requires:** TNG 15.x
 
 **Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_kimon_pedigree.cfg` (search for `pedkimon`) and in `mods/tng_kimon_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
@@ -77,6 +77,13 @@ This mod includes fixes for pre-existing TNG vulnerabilities:
 - **Client-side HTML escaping** — Escapes `&`, `<`, `>` in ancestor names before innerHTML insertion, compensating for TNG's `xmlcharacters()` not escaping angle brackets
 
 ## Changelog
+
+### 1.2
+
+- Save pedigree chart as PNG (transparent background, boxes keep fill) or JPG (white background)
+- html2canvas 1.4.1 loaded from CDN with SRI hash for integrity verification
+- Dynamic scale capping for iOS Safari compatibility (16M pixel limit)
+- Re-entrancy guard and loading state indicator during export
 
 ### 1.1.1
 
