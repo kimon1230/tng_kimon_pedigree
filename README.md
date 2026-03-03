@@ -3,21 +3,21 @@
 A [TNG](https://tngsitebuilding.com/index.php) (The Next Generation of Genealogy Sitebuilding by Darrin Lythgoe) mod that adds a **Kimon** display mode to the pedigree chart.
 
 **Author:** Kimon Andreou
-**Mod Version:** 1.2.1
+**Mod Version:** 1.3.0
 **Requires:** TNG 15.x
 
-**Note:** The display name "Kimon" is a placeholder. To change it, update the label in `mods/tng_kimon_pedigree.cfg` (search for `pedkimon`) and in `mods/tng_kimon_pedigree/kimon_pedigree.js` (search for `kimonpedlnk`).
+**Note:** The display name "Kimon" is a placeholder. To change it, update all occurrences of `pedkimon` and `kimonpedlnk` in `mods/tng_kimon_pedigree.cfg`.
 
 ## What It Does
 
 Adds a "Kimon" tab to the pedigree chart display mode selector (alongside Standard, Compact, Box, etc.). The Kimon mode renders a clean, read-only ancestor chart:
 
-- No gender images
+- No gender images, popups, or down-arrows
 - No hyperlinks on names (plain text only)
-- No arrows (down-arrows, left navigation arrow)
-- Dynamic box heights — each box sized to its content (compact for short names, taller when text wraps)
+- Dynamic box heights — each box sized to its content
 - Connector lines redrawn to match each box's actual midpoint
-- No popups on hover
+- Empty subtrees collapse — missing ancestor branches consume no vertical space
+- Save as PNG (transparent background) or JPG (white background) — no external dependencies required
 
 ## Files
 
@@ -38,7 +38,9 @@ The mod installer will:
 - Create the `mods/tng_kimon_pedigree/` directory
 - Create `mods/tng_kimon_pedigree/kimon_pedigree.js`
 - Patch `pedigree.php` (6 patches: input sanitization, link highlighting, config overrides, JS include, CSS injection, display selector link)
-- Patch `languages/English/text.php` (1 patch: "Kimon" label)
+- Patch `ajx_pedjson.php` (1 patch: surname field for name splitting)
+- Patch `ahnentafel.php`, `fan.php`, `verticalchart.php`, `pedigreetext.php` (1 patch each: Kimon display mode link)
+- Patch `languages/English/text.php` (1 patch: UI labels)
 
 ## Upgrading
 
@@ -77,6 +79,14 @@ This mod includes fixes for pre-existing TNG vulnerabilities:
 - **Client-side HTML escaping** — Escapes `&`, `<`, `>` in ancestor names before innerHTML insertion, compensating for TNG's `xmlcharacters()` not escaping angle brackets
 
 ## Changelog
+
+### 1.3.0
+
+- PNG/JPG export now uses native Canvas API — no external dependencies or internet connection required
+- Collapse empty subtrees — hidden/missing ancestor branches no longer consume vertical space
+- Recursive subtree-span layout algorithm replaces linear stacking for dramatically shorter charts with sparse data
+- Off-page arrows hidden for collapsed slots (display:none, not just repositioned)
+- Container dimensions now exclude hidden slots from sizing calculations
 
 ### 1.2.1
 
